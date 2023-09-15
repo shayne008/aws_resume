@@ -13,6 +13,9 @@ Resources:
   MyWebsite:
     Type: AWS::S3::Bucket
     Properties:
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
       BucketName: hg-cloud-resume-08824
   HelloWorldFunction:
     Type: AWS::Serverless::Function
